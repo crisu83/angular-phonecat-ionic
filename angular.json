@@ -20,24 +20,15 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "assets"
-              },
-              {
-                "glob": "**/*.svg",
-                "input": "node_modules/ionicons/dist/ionicons/svg",
-                "output": "./svg"
-              }
+              "src/assets",
+              "src/favicon.ico",
+              "src/phones",
+              "src/img"
             ],
             "styles": [
-              {
-                "input": "src/theme/variables.scss"
-              },
-              {
-                "input": "src/global.scss"
-              }
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.css",
+              "src/app/app.animations.css"
             ],
             "scripts": []
           },
@@ -98,20 +89,14 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "styles": [],
-            "scripts": [],
             "assets": [
-              {
-                "glob": "favicon.ico",
-                "input": "src/",
-                "output": "/"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "/assets"
-              }
-            ]
+              "src/assets",
+              "src/favicon.ico",
+              "src/phones",
+              "src/img"
+            ],
+            "styles": ["src/styles.css"],
+            "scripts": []
           },
           "configurations": {
             "ci": {
@@ -174,7 +159,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@ionic/angular-toolkit"
+    "defaultCollection": "@ionic/angular-toolkit",
+    "analytics": "1199bc46-6640-434e-a8ad-369435f5e90e"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
